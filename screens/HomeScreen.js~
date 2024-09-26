@@ -1,0 +1,28 @@
+import React from 'react';
+import { View, Text, Button } from 'react-native';
+
+const HomeScreen = ({ navigation }) => {
+    return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>Accueil de l'Église</Text>
+            <Button
+                title="Voir les Lives"
+                onPress={() => navigation.navigate('LiveStreamScreen')}
+            />
+            <Button
+                title="Programme"
+                onPress={() => navigation.navigate('ProgramScreen')}
+            />
+            <Button
+                title="Chat"
+                onPress={() => navigation.navigate('ChatScreen')}
+            />
+            <Button
+                title="Prédications Manquées"
+                onPress={() => navigation.navigate('MissedSermonsScreen')}
+            />
+        </View>
+    );
+};
+
+export default HomeScreen;
